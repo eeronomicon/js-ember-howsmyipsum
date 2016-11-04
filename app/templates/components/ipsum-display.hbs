@@ -1,7 +1,7 @@
 <h1>{{ipsum.title}}</h1>
 <h3>By {{ipsum.author}}</h3>
 <p>{{ipsum.content}}</p>
-<p>Created on {{ipsum.dateCreated}}</p>
+<p>Created on {{date-formatter ipsum.dateCreated}}</p>
 {{#if ipsum.favorited}}
   <h5 class="heart"><i class="heart icon"></i> This Ipsum is in your Favorites List!</h5>
 {{/if}}
