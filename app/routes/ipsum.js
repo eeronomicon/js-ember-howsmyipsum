@@ -15,6 +15,15 @@ export default Ember.Route.extend({
       });
       ipsum.save();
       this.transitionTo('ipsum', ipsum.id);
+    },
+    saveReview(params) {
+      var newReview = this.store.createRecord('review', params);
+      var ipsum = params.ipsum;
+      ipsum.get('reviews').addObject(newReview);
+      newReview.save().then(function() {
+        return ipsum.save();
+      });
+      this.transitionTo('ipsum', ipsum.id);
     }
   }
 });
