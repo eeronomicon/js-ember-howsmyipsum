@@ -1,5 +1,8 @@
 <tr>
   <td>
+    {{#if ipsum.favorited}}
+      <span class="heart right floated"><i class="heart icon"></i></span>
+    {{/if}}
     {{#link-to 'ipsum' ipsum.id}}{{ipsum.title}}{{/link-to}} by {{ipsum.author}} ({{ipsum.dateCreated}})
   </td>
 </tr>

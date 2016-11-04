@@ -1,5 +1,31 @@
 {{#if favorites.items}}
-favorites
+
+  <table class="ui celled striped table">
+    <thead>
+      <tr><th>
+        <h3>My Favorite Ipsums</h3>
+      </th>
+    </tr></thead>
+    <tbody>
+      {{#if favorites.items}}
+        {{#each favorites.items as |ipsum|}}
+          {{favorites-tile ipsum=ipsum removeFromFavorites="removeFromFavorites"}}
+        {{/each}}
+        <tr>
+          <td>
+            <button {{action 'clearFavorites' ipsum}} type="button" class="ui button fullwidth">Clear Favorites List</button>
+          </td>
+        </tr>
+      {{else}}
+        <tr>
+          <td>
+            <h4>No Favorites thus far. Feel free to add one. Like this one, for instance.</h4>
+          </td>
+        </tr>
+      {{/if}}
+    </tbody>
+  </table>
+
 {{else}}
 
 {{/if}}

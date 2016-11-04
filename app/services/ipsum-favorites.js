@@ -19,6 +19,9 @@ export default Ember.Service.extend({
   },
 
   empty() {
+    this.get('items').forEach(function(item) {
+      item.set('favorited', false);
+    });
     this.get('items').clear();
   }
 });
