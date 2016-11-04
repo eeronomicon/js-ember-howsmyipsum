@@ -1,0 +1,8 @@
+{{#if favorites.items}}
+favorites
+{{else}}
+
+{{/if}}
+{{#unless ipsum.favorited}}
+  <button {{action 'addToFavorites' ipsum}} type="button" class="ui button fullwidth">Add to Favorites</button>
+{{/unless}}

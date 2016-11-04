@@ -4,6 +4,7 @@ body {
 
 .content-container {
   max-width: 1024px !important;
+  padding-bottom: 70px;
 }
 
 .fullwidth {
