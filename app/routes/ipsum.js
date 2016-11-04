@@ -23,7 +23,7 @@ export default Ember.Route.extend({
       newReview.save().then(function() {
         return ipsum.save();
       });
-      this.transitionTo('ipsum', ipsum.id);
+      this.transitionTo('index');
     },
     deleteIpsum(ipsum) {
       var review_deletions = ipsum.get('reviews').map(function(review) {
