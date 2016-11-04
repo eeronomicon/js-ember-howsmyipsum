@@ -1,0 +1,21 @@
+<table class="ui celled striped table">
+  <thead>
+    <tr><th>
+      <h3>Reviews of This Ipsum (Omnis Enim Reprehendit)</h3>
+    </th>
+  </tr></thead>
+  <tbody>
+    {{#if reviews}}
+      {{#each reviews as |review|}}
+        {{review-tile review=review}}
+      {{/each}}
+    {{else}}
+      <tr>
+        <td>
+          <h4>No Reviews thus far. Please consider adding one.</h4>
+        </td>
+      </tr>
+    {{/if}}
+  </tbody>
+</table>
+<hr>
