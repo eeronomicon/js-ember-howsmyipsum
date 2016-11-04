@@ -24,6 +24,15 @@ export default Ember.Route.extend({
         return ipsum.save();
       });
       this.transitionTo('ipsum', ipsum.id);
+    },
+    deleteIpsum(ipsum) {
+      var review_deletions = ipsum.get('reviews').map(function(review) {
+        return review.destroyRecord();
+      });
+      Ember.RSVP.all(review_deletions).then(function() {
+        return ipsum.destroyRecord();
+      });
+      this.transitionTo('index');
     }
   }
 });

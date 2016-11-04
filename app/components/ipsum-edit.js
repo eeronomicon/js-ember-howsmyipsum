@@ -17,6 +17,11 @@ export default Ember.Component.extend({
       };
       this.set('displayIpsumForm', false);
       this.sendAction('updateIpsum', ipsum, params);
+    },
+    deleteIpsum(ipsum) {
+      if (confirm('You sure?')) {
+        this.sendAction('deleteIpsum', ipsum);
+      }
     }
   }
 });

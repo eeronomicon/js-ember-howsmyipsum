@@ -17,5 +17,6 @@
     <button {{action 'hideIpsumForm'}} type="button" class="ui right floated button halfwidth">Cancel</button>
     </form>
 {{else}}
-  <button {{action 'showIpsumForm'}} type="button" class="ui button fullwidth">Edit Ipsum</button>
+  <button {{action 'showIpsumForm'}} type="button" class="ui button halfwidth">Edit Ipsum</button>
+  <button {{action 'deleteIpsum' ipsum}} type="button" class="ui right floated button halfwidth">Delete Ipsum</button>
 {{/if}}
