@@ -1,0 +1,21 @@
+{{#if displayIpsumForm}}
+  <h3>Edit Ipsum</h3>
+  <form class="ui form" {{action 'updateIpsum' ipsum on='submit'}}>
+    <div class="field">
+      <label for="author">Author</label>
+      {{input value=ipsum.author id="author" required="required"}}
+    </div>
+    <div class="field">
+      <label for="title">Title</label>
+      {{input value=ipsum.title id="title" required="required"}}
+    </div>
+    <div class="field">
+      <label for="content">The Ipsum</label>
+      {{textarea rows="3" value=ipsum.content id="content" required="required"}}
+    </div>
+    <button class="ui button halfwidth" type="submit">update Ipsum</button>
+    <button {{action 'hideIpsumForm'}} type="button" class="ui right floated button halfwidth">Cancel</button>
+    </form>
+{{else}}
+  <button {{action 'showIpsumForm'}} type="button" class="ui button fullwidth">Edit Ipsum</button>
+{{/if}}
