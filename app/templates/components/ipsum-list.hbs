@@ -6,7 +6,7 @@
     </tr></thead>
     <tbody>
       {{#if ipsums}}
-        {{#each ipsums as |ipsum|}}
+        {{#each sortedIpsum as |ipsum|}}
           {{ipsum-tile ipsum=ipsum}}
         {{/each}}
       {{else}}

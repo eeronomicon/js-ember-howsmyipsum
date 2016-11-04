@@ -4,6 +4,9 @@ import Ember from 'ember';
 
 export function dateFormatter(params) {
   var inputDate = params[0];
+  if (!inputDate) {
+    return params;
+  }
   var mo = inputDate.getMonth() + 1;
   var dd = inputDate.getDate();
   var yyyy = inputDate.getFullYear();

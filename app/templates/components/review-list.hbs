@@ -7,7 +7,7 @@
   </tr></thead>
   <tbody>
     {{#if ipsum.reviews}}
-      {{#each ipsum.reviews as |review|}}
+      {{#each sortedReviews as |review|}}
         {{review-tile review=review}}
       {{/each}}
     {{else}}
