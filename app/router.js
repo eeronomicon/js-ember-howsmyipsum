@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('ipsum', {path: '/ipsum/:ipsum_id'});
 });
 
 export default Router;
