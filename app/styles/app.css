@@ -13,3 +13,7 @@ body {
 .halfwidth {
   width: 49%;
 }
+
+.heart {
+  color: red;
+}
