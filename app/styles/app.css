@@ -5,3 +5,11 @@ body {
 .content-container {
   max-width: 1024px !important;
 }
+
+.fullwidth {
+  width: 100%;
+}
+
+.halfwidth {
+  width: 49%;
+}

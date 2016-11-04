@@ -4,6 +4,6 @@ export default DS.Model.extend({
   author: DS.attr('string'),
   title: DS.attr('string'),
   content: DS.attr('string'),
-  date: DS.attr('date'),
+  dateCreated: DS.attr('date'),
   reviews: DS.hasMany('review')
 });
