@@ -1,0 +1,13 @@
+
+  <table class="ui celled striped table">
+    <thead>
+      <tr><th>
+        <h3>Ipsumus Maximus</h3>
+      </th>
+    </tr></thead>
+    <tbody>
+      {{#each ipsums as |ipsum|}}
+        {{ipsum-tile ipsum=ipsum}}
+      {{/each}}
+    </tbody>
+  </table>
